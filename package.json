@@ -1,0 +1,21 @@
+{
+  "name": "orrery",
+  "version": "0.1.0",
+  "description": "Deterministic Vedic chart-computation service — Swiss Ephemeris (WASM), Lahiri ayanamsa",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "postinstall": "node scripts/sync-wasm.mjs",
+    "test": "node --experimental-strip-types --test test/*.test.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "sweph-wasm": "2.6.9"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "wrangler": "^4.0.0"
+  }
+}

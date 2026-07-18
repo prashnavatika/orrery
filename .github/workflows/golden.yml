@@ -1,0 +1,19 @@
+name: golden-gate
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm ci
+      - run: npx tsc --noEmit
+      - run: npm test
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: pyswisseph reference gate + fixture parity
+        run: |
+          python -m pip install --quiet pyswisseph
+          python test_golden.py
+          python test_parity.py
