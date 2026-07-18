@@ -20,7 +20,9 @@ export function getSweph(): Promise<Sweph> {
         return inst.exports;
       },
     });
-    return new (SwissEPH as unknown as new (m: unknown) => Sweph)(em);
+    const swe = new (SwissEPH as unknown as new (m: unknown) => Sweph)(em);
+    swe.swe_set_sid_mode(1, 0, 0); // SIDM_LAHIRI, from first touch — health reads ayanamsa before any chart call
+    return swe;
   })();
   return instance;
 }

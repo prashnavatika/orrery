@@ -1,0 +1,15 @@
+name: golden-gate
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm ci
+      - run: npm test
+      - name: cross-check vs pyswisseph reference
+        run: |
+          pip install pyswisseph --quiet
+          python3 test_golden.py
