@@ -89,6 +89,8 @@ export default {
           return json(computeTransits(swe, chart, jdFromUtc(swe, at)));
         }
         case "/v1/wheel.svg": {
+          if (req.variant !== undefined && req.variant !== "rasi" && req.variant !== "navamsa") return json({ error: "variant must be rasi|navamsa" }, 400);
+          if (req.style !== undefined && req.style !== "north" && req.style !== "south") return json({ error: "style must be north|south" }, 400);
           const svg = wheelSvg(chart, { variant: req.variant ?? "rasi", style: req.style ?? "north", ...(req.tokens ?? {}) });
           return new Response(svg, { headers: { "content-type": "image/svg+xml; charset=utf-8", "access-control-allow-origin": "*" } });
         }

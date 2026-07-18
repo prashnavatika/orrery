@@ -19,7 +19,25 @@ const DEFAULTS: Required<WheelStyle> = {
   accent: "#8a6d1f", font: "Georgia, 'Noto Serif', serif",
 };
 
-const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+
+const COLOR_RE = /^(#[0-9a-fA-F]{3,8}|[a-zA-Z]{1,30})$/;
+const FONT_RE = /^[a-zA-Z0-9 ,'-]{1,80}$/;
+
+/** Reject/normalize user-supplied style tokens — every value lands inside an SVG
+ * attribute, so unknown shapes are dropped, never interpolated. */
+export function sanitizeStyle(raw: WheelStyle | undefined): WheelStyle {
+  if (!raw) return {};
+  const out: WheelStyle = {};
+  const size = Number(raw.size);
+  if (Number.isFinite(size)) out.size = Math.min(2000, Math.max(200, size));
+  for (const k of ["stroke", "paper", "text", "accent"] as const) {
+    const v = raw[k];
+    if (typeof v === "string" && COLOR_RE.test(v)) out[k] = v;
+  }
+  if (typeof raw.font === "string" && FONT_RE.test(raw.font)) out.font = raw.font;
+  return out;
+}
 
 /** House occupants map (1..12) from a chart, for rasi or navamsa. */
 function occupants(chart: Chart, variant: "rasi" | "navamsa"): Map<number, string[]> {
@@ -53,9 +71,9 @@ function houseSigns(lagnaSignI: number): number[] {
 
 /** North-Indian style: fixed diamond houses, signs rotate. */
 export function wheelSvg(chart: Chart, opts: { variant?: "rasi" | "navamsa"; style?: "north" | "south" } & WheelStyle = {}): string {
-  const variant = opts.variant ?? "rasi";
-  const layout = opts.style ?? "north";
-  const s = { ...DEFAULTS, ...opts };
+  const variant = opts.variant === "navamsa" ? "navamsa" : "rasi";
+  const layout = opts.style === "south" ? "south" : "north";
+  const s = { ...DEFAULTS, ...sanitizeStyle(opts) };
   return layout === "north" ? north(chart, variant, s) : south(chart, variant, s);
 }
 

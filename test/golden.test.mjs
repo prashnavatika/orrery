@@ -108,3 +108,23 @@ test("G10 lonParts boundary safety", () => {
   assert.equal(lonParts(29.9999).sign, "Mesha");
   assert.equal(lonParts(30.0001).sign, "Vrishabha");
 });
+
+test("G11 wheel token injection is neutralized", async () => {
+  const { sanitizeStyle } = await import("../src/wheel.ts");
+  const c = computeChart(swe, { y: 1994, mo: 11, d: 14, hh: 6, mm: 42, tz_offset_hours: 5.5, lat: 26.9124, lon: 75.7873 });
+  const evil = { stroke: '"/><script>alert(1)</script>', font: '";</style><script>x</script>', paper: "javascript:alert(1)", size: 99999 };
+  const clean = sanitizeStyle(evil);
+  assert.equal(clean.stroke, undefined, "evil stroke dropped");
+  assert.equal(clean.font, undefined, "evil font dropped");
+  assert.equal(clean.paper, undefined, "evil paper dropped");
+  assert.equal(clean.size, 2000, "size clamped");
+  const svg = wheelSvg(c, { tokens: undefined, ...evil });
+  assert.ok(!svg.includes("<script"), "no script element");
+  assert.ok(svg.includes('stroke="#333333"'), "default stroke used");
+  // legit tokens still work
+  const themed = wheelSvg(c, { stroke: "#D4A94E", paper: "#221A3E" });
+  assert.ok(themed.includes('stroke="#D4A94E"'));
+  // unknown enums fall back to rasi/north deterministically
+  const fallback = wheelSvg(c, { variant: "evil", style: "weird" });
+  assert.ok(fallback.includes("Rasi (D1)"), "unknown variant -> rasi");
+});
