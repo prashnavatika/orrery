@@ -17,3 +17,5 @@ __pycache__/
 
 # swiss ephemeris data files (never vendored)
 *.se1
+
+.worktrees/
