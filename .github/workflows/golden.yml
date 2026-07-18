@@ -8,8 +8,12 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
       - run: npm ci
+      - run: npx tsc --noEmit
       - run: npm test
-      - name: cross-check vs pyswisseph reference
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: pyswisseph reference gate + fixture parity
         run: |
-          pip install pyswisseph --quiet
-          python3 test_golden.py
+          python -m pip install --quiet pyswisseph
+          python test_golden.py
+          python test_parity.py

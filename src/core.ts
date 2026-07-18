@@ -76,7 +76,8 @@ export function navamsaSign(lonIn: number): string {
 
 export interface DashaPeriod { lord: string; start_jd: number; end_jd: number; antardashas?: DashaPeriod[] }
 
-export function vimshottari(moonLon: number, jdBirth: number, depthLevels = 2): DashaPeriod[] {
+export function vimshottari(moonLonIn: number, jdBirth: number, depthLevels = 2): DashaPeriod[] {
+  const moonLon = ((moonLonIn % 360) + 360) % 360; // JS % preserves sign; the Python reference never goes negative
   const nakSpan = 360 / 27;
   const nakI = Math.floor(moonLon / nakSpan);
   const seqI = nakI % 9;

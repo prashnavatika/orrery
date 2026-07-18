@@ -36,6 +36,11 @@ function parseBirth(body: unknown): { birth: BirthInput; req: ChartRequest } {
   const [y, mo, d] = [Number(mDob[1]), Number(mDob[2]), Number(mDob[3])];
   const [hh, mm] = [Number(mTob[1]), Number(mTob[2])];
   if (mo < 1 || mo > 12 || d < 1 || d > 31) throw new BadRequest("dob out of range");
+  // real-calendar check: swe_julday silently rolls Feb 30 -> Mar 2, yielding a plausible wrong chart
+  const roundtrip = new Date(Date.UTC(y, mo - 1, d));
+  if (roundtrip.getUTCFullYear() !== y || roundtrip.getUTCMonth() !== mo - 1 || roundtrip.getUTCDate() !== d) {
+    throw new BadRequest(`dob ${dob} is not a real calendar date`);
+  }
   if (hh > 23 || mm > 59) throw new BadRequest("tob out of range");
   if (y < 1200 || y > 2400) throw new BadRequest("dob year out of supported range (1200-2400)");
   return { birth: { y, mo, d, hh, mm, tz_offset_hours: tz, lat, lon }, req: r as unknown as ChartRequest };
@@ -86,6 +91,8 @@ export default {
         case "/v1/transits": {
           const at = req.at ? new Date(req.at) : new Date();
           if (Number.isNaN(at.getTime())) return json({ error: "at must be ISO-8601" }, 400);
+          const yr = at.getUTCFullYear();
+          if (yr < 1200 || yr > 2400) return json({ error: "at year out of supported range (1200-2400)" }, 400);
           return json(computeTransits(swe, chart, jdFromUtc(swe, at)));
         }
         case "/v1/wheel.svg": {
