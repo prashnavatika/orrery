@@ -1,0 +1,575 @@
+{
+ "schema_version": "0.1.0",
+ "meta": {
+  "ayanamsa": "lahiri",
+  "ayanamsa_value": 23.785405,
+  "node": "mean",
+  "house_system": "whole_sign",
+  "ephemeris": "moshier",
+  "jd_ut": 2449670.55
+ },
+ "ascendant": {
+  "lon": 206.042472,
+  "sign": "Tula",
+  "sign_index": 7,
+  "degree_in_sign": 26.0425,
+  "nakshatra": "Vishakha",
+  "nakshatra_index": 16,
+  "pada": 2
+ },
+ "planets": {
+  "Su": {
+   "lon": 207.645281,
+   "sign": "Tula",
+   "sign_index": 7,
+   "degree_in_sign": 27.6453,
+   "nakshatra": "Vishakha",
+   "nakshatra_index": 16,
+   "pada": 3,
+   "retrograde": false,
+   "navamsa_sign": "Mithuna",
+   "house": 1
+  },
+  "Mo": {
+   "lon": 341.512851,
+   "sign": "Meena",
+   "sign_index": 12,
+   "degree_in_sign": 11.5129,
+   "nakshatra": "Uttara Bhadrapada",
+   "nakshatra_index": 26,
+   "pada": 3,
+   "retrograde": false,
+   "navamsa_sign": "Tula",
+   "house": 6
+  },
+  "Ma": {
+   "lon": 116.558806,
+   "sign": "Karka",
+   "sign_index": 4,
+   "degree_in_sign": 26.5588,
+   "nakshatra": "Ashlesha",
+   "nakshatra_index": 9,
+   "pada": 3,
+   "retrograde": false,
+   "navamsa_sign": "Kumbha",
+   "house": 10
+  },
+  "Me": {
+   "lon": 191.163076,
+   "sign": "Tula",
+   "sign_index": 7,
+   "degree_in_sign": 11.1631,
+   "nakshatra": "Swati",
+   "nakshatra_index": 15,
+   "pada": 2,
+   "retrograde": false,
+   "navamsa_sign": "Makara",
+   "house": 1
+  },
+  "Ju": {
+   "lon": 210.611898,
+   "sign": "Vrishchika",
+   "sign_index": 8,
+   "degree_in_sign": 0.6119,
+   "nakshatra": "Vishakha",
+   "nakshatra_index": 16,
+   "pada": 4,
+   "retrograde": false,
+   "navamsa_sign": "Karka",
+   "house": 2
+  },
+  "Ve": {
+   "lon": 190.607185,
+   "sign": "Tula",
+   "sign_index": 7,
+   "degree_in_sign": 10.6072,
+   "nakshatra": "Swati",
+   "nakshatra_index": 15,
+   "pada": 2,
+   "retrograde": true,
+   "navamsa_sign": "Makara",
+   "house": 1
+  },
+  "Sa": {
+   "lon": 311.910114,
+   "sign": "Kumbha",
+   "sign_index": 11,
+   "degree_in_sign": 11.9101,
+   "nakshatra": "Shatabhisha",
+   "nakshatra_index": 24,
+   "pada": 2,
+   "retrograde": false,
+   "navamsa_sign": "Makara",
+   "house": 5
+  },
+  "Ra": {
+   "lon": 200.518305,
+   "sign": "Tula",
+   "sign_index": 7,
+   "degree_in_sign": 20.5183,
+   "nakshatra": "Vishakha",
+   "nakshatra_index": 16,
+   "pada": 1,
+   "retrograde": true,
+   "navamsa_sign": "Mesha",
+   "house": 1
+  },
+  "Ke": {
+   "lon": 20.518305,
+   "sign": "Mesha",
+   "sign_index": 1,
+   "degree_in_sign": 20.5183,
+   "nakshatra": "Bharani",
+   "nakshatra_index": 2,
+   "pada": 3,
+   "retrograde": true,
+   "navamsa_sign": "Tula",
+   "house": 7
+  }
+ },
+ "vimshottari": [
+  {
+   "lord": "Sa",
+   "start_jd": 2449670.55,
+   "end_jd": 2452353.0144,
+   "antardashas": [
+    {
+     "lord": "Mo",
+     "start_jd": 2449670.55,
+     "end_jd": 2449981.9332
+    },
+    {
+     "lord": "Ma",
+     "start_jd": 2449981.9332,
+     "end_jd": 2450386.7519
+    },
+    {
+     "lord": "Ra",
+     "start_jd": 2450386.7519,
+     "end_jd": 2451427.7144
+    },
+    {
+     "lord": "Ju",
+     "start_jd": 2451427.7144,
+     "end_jd": 2452353.0144
+    }
+   ]
+  },
+  {
+   "lord": "Me",
+   "start_jd": 2452353.0144,
+   "end_jd": 2458562.2644,
+   "antardashas": [
+    {
+     "lord": "Me",
+     "start_jd": 2452353.0144,
+     "end_jd": 2453232.6582
+    },
+    {
+     "lord": "Ke",
+     "start_jd": 2453232.6582,
+     "end_jd": 2453594.8644
+    },
+    {
+     "lord": "Ve",
+     "start_jd": 2453594.8644,
+     "end_jd": 2454629.7394
+    },
+    {
+     "lord": "Su",
+     "start_jd": 2454629.7394,
+     "end_jd": 2454940.2019
+    },
+    {
+     "lord": "Mo",
+     "start_jd": 2454940.2019,
+     "end_jd": 2455457.6394
+    },
+    {
+     "lord": "Ma",
+     "start_jd": 2455457.6394,
+     "end_jd": 2455819.8457
+    },
+    {
+     "lord": "Ra",
+     "start_jd": 2455819.8457,
+     "end_jd": 2456751.2332
+    },
+    {
+     "lord": "Ju",
+     "start_jd": 2456751.2332,
+     "end_jd": 2457579.1332
+    },
+    {
+     "lord": "Sa",
+     "start_jd": 2457579.1332,
+     "end_jd": 2458562.2644
+    }
+   ]
+  },
+  {
+   "lord": "Ke",
+   "start_jd": 2458562.2644,
+   "end_jd": 2461119.0144,
+   "antardashas": [
+    {
+     "lord": "Ke",
+     "start_jd": 2458562.2644,
+     "end_jd": 2458711.4082
+    },
+    {
+     "lord": "Ve",
+     "start_jd": 2458711.4082,
+     "end_jd": 2459137.5332
+    },
+    {
+     "lord": "Su",
+     "start_jd": 2459137.5332,
+     "end_jd": 2459265.3707
+    },
+    {
+     "lord": "Mo",
+     "start_jd": 2459265.3707,
+     "end_jd": 2459478.4332
+    },
+    {
+     "lord": "Ma",
+     "start_jd": 2459478.4332,
+     "end_jd": 2459627.5769
+    },
+    {
+     "lord": "Ra",
+     "start_jd": 2459627.5769,
+     "end_jd": 2460011.0894
+    },
+    {
+     "lord": "Ju",
+     "start_jd": 2460011.0894,
+     "end_jd": 2460351.9894
+    },
+    {
+     "lord": "Sa",
+     "start_jd": 2460351.9894,
+     "end_jd": 2460756.8082
+    },
+    {
+     "lord": "Me",
+     "start_jd": 2460756.8082,
+     "end_jd": 2461119.0144
+    }
+   ]
+  },
+  {
+   "lord": "Ve",
+   "start_jd": 2461119.0144,
+   "end_jd": 2468424.0144,
+   "antardashas": [
+    {
+     "lord": "Ve",
+     "start_jd": 2461119.0144,
+     "end_jd": 2462336.5144
+    },
+    {
+     "lord": "Su",
+     "start_jd": 2462336.5144,
+     "end_jd": 2462701.7644
+    },
+    {
+     "lord": "Mo",
+     "start_jd": 2462701.7644,
+     "end_jd": 2463310.5144
+    },
+    {
+     "lord": "Ma",
+     "start_jd": 2463310.5144,
+     "end_jd": 2463736.6394
+    },
+    {
+     "lord": "Ra",
+     "start_jd": 2463736.6394,
+     "end_jd": 2464832.3894
+    },
+    {
+     "lord": "Ju",
+     "start_jd": 2464832.3894,
+     "end_jd": 2465806.3894
+    },
+    {
+     "lord": "Sa",
+     "start_jd": 2465806.3894,
+     "end_jd": 2466963.0144
+    },
+    {
+     "lord": "Me",
+     "start_jd": 2466963.0144,
+     "end_jd": 2467997.8894
+    },
+    {
+     "lord": "Ke",
+     "start_jd": 2467997.8894,
+     "end_jd": 2468424.0144
+    }
+   ]
+  },
+  {
+   "lord": "Su",
+   "start_jd": 2468424.0144,
+   "end_jd": 2470615.5144,
+   "antardashas": [
+    {
+     "lord": "Su",
+     "start_jd": 2468424.0144,
+     "end_jd": 2468533.5894
+    },
+    {
+     "lord": "Mo",
+     "start_jd": 2468533.5894,
+     "end_jd": 2468716.2144
+    },
+    {
+     "lord": "Ma",
+     "start_jd": 2468716.2144,
+     "end_jd": 2468844.0519
+    },
+    {
+     "lord": "Ra",
+     "start_jd": 2468844.0519,
+     "end_jd": 2469172.7769
+    },
+    {
+     "lord": "Ju",
+     "start_jd": 2469172.7769,
+     "end_jd": 2469464.9769
+    },
+    {
+     "lord": "Sa",
+     "start_jd": 2469464.9769,
+     "end_jd": 2469811.9644
+    },
+    {
+     "lord": "Me",
+     "start_jd": 2469811.9644,
+     "end_jd": 2470122.4269
+    },
+    {
+     "lord": "Ke",
+     "start_jd": 2470122.4269,
+     "end_jd": 2470250.2644
+    },
+    {
+     "lord": "Ve",
+     "start_jd": 2470250.2644,
+     "end_jd": 2470615.5144
+    }
+   ]
+  },
+  {
+   "lord": "Mo",
+   "start_jd": 2470615.5144,
+   "end_jd": 2474268.0144,
+   "antardashas": [
+    {
+     "lord": "Mo",
+     "start_jd": 2470615.5144,
+     "end_jd": 2470919.8894
+    },
+    {
+     "lord": "Ma",
+     "start_jd": 2470919.8894,
+     "end_jd": 2471132.9519
+    },
+    {
+     "lord": "Ra",
+     "start_jd": 2471132.9519,
+     "end_jd": 2471680.8269
+    },
+    {
+     "lord": "Ju",
+     "start_jd": 2471680.8269,
+     "end_jd": 2472167.8269
+    },
+    {
+     "lord": "Sa",
+     "start_jd": 2472167.8269,
+     "end_jd": 2472746.1394
+    },
+    {
+     "lord": "Me",
+     "start_jd": 2472746.1394,
+     "end_jd": 2473263.5769
+    },
+    {
+     "lord": "Ke",
+     "start_jd": 2473263.5769,
+     "end_jd": 2473476.6394
+    },
+    {
+     "lord": "Ve",
+     "start_jd": 2473476.6394,
+     "end_jd": 2474085.3894
+    },
+    {
+     "lord": "Su",
+     "start_jd": 2474085.3894,
+     "end_jd": 2474268.0144
+    }
+   ]
+  },
+  {
+   "lord": "Ma",
+   "start_jd": 2474268.0144,
+   "end_jd": 2476824.7644,
+   "antardashas": [
+    {
+     "lord": "Ma",
+     "start_jd": 2474268.0144,
+     "end_jd": 2474417.1582
+    },
+    {
+     "lord": "Ra",
+     "start_jd": 2474417.1582,
+     "end_jd": 2474800.6707
+    },
+    {
+     "lord": "Ju",
+     "start_jd": 2474800.6707,
+     "end_jd": 2475141.5707
+    },
+    {
+     "lord": "Sa",
+     "start_jd": 2475141.5707,
+     "end_jd": 2475546.3894
+    },
+    {
+     "lord": "Me",
+     "start_jd": 2475546.3894,
+     "end_jd": 2475908.5957
+    },
+    {
+     "lord": "Ke",
+     "start_jd": 2475908.5957,
+     "end_jd": 2476057.7394
+    },
+    {
+     "lord": "Ve",
+     "start_jd": 2476057.7394,
+     "end_jd": 2476483.8644
+    },
+    {
+     "lord": "Su",
+     "start_jd": 2476483.8644,
+     "end_jd": 2476611.7019
+    },
+    {
+     "lord": "Mo",
+     "start_jd": 2476611.7019,
+     "end_jd": 2476824.7644
+    }
+   ]
+  },
+  {
+   "lord": "Ra",
+   "start_jd": 2476824.7644,
+   "end_jd": 2483399.2644,
+   "antardashas": [
+    {
+     "lord": "Ra",
+     "start_jd": 2476824.7644,
+     "end_jd": 2477810.9394
+    },
+    {
+     "lord": "Ju",
+     "start_jd": 2477810.9394,
+     "end_jd": 2478687.5394
+    },
+    {
+     "lord": "Sa",
+     "start_jd": 2478687.5394,
+     "end_jd": 2479728.5019
+    },
+    {
+     "lord": "Me",
+     "start_jd": 2479728.5019,
+     "end_jd": 2480659.8894
+    },
+    {
+     "lord": "Ke",
+     "start_jd": 2480659.8894,
+     "end_jd": 2481043.4019
+    },
+    {
+     "lord": "Ve",
+     "start_jd": 2481043.4019,
+     "end_jd": 2482139.1519
+    },
+    {
+     "lord": "Su",
+     "start_jd": 2482139.1519,
+     "end_jd": 2482467.8769
+    },
+    {
+     "lord": "Mo",
+     "start_jd": 2482467.8769,
+     "end_jd": 2483015.7519
+    },
+    {
+     "lord": "Ma",
+     "start_jd": 2483015.7519,
+     "end_jd": 2483399.2644
+    }
+   ]
+  },
+  {
+   "lord": "Ju",
+   "start_jd": 2483399.2644,
+   "end_jd": 2489243.2644,
+   "antardashas": [
+    {
+     "lord": "Ju",
+     "start_jd": 2483399.2644,
+     "end_jd": 2484178.4644
+    },
+    {
+     "lord": "Sa",
+     "start_jd": 2484178.4644,
+     "end_jd": 2485103.7644
+    },
+    {
+     "lord": "Me",
+     "start_jd": 2485103.7644,
+     "end_jd": 2485931.6644
+    },
+    {
+     "lord": "Ke",
+     "start_jd": 2485931.6644,
+     "end_jd": 2486272.5644
+    },
+    {
+     "lord": "Ve",
+     "start_jd": 2486272.5644,
+     "end_jd": 2487246.5644
+    },
+    {
+     "lord": "Su",
+     "start_jd": 2487246.5644,
+     "end_jd": 2487538.7644
+    },
+    {
+     "lord": "Mo",
+     "start_jd": 2487538.7644,
+     "end_jd": 2488025.7644
+    },
+    {
+     "lord": "Ma",
+     "start_jd": 2488025.7644,
+     "end_jd": 2488366.6644
+    },
+    {
+     "lord": "Ra",
+     "start_jd": 2488366.6644,
+     "end_jd": 2489243.2644
+    }
+   ]
+  }
+ ]
+}

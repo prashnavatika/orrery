@@ -1,0 +1,19 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# working notes (per plan-folder convention)
+plan/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# env / secrets
+.env
+.dev.vars
+
+# swiss ephemeris data files (never vendored)
+*.se1
